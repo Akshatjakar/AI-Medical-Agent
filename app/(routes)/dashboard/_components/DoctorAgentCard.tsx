@@ -40,7 +40,10 @@ export default function DoctorAgentCard({ doctorAgent }: Props) {
         selectedDoctor: doctorAgent,
       });
 
-      if (result.data?.sessionId) {
+      // ✅ Prefer redirectUrl from API, fallback to sessionId
+      if (result.data?.redirectUrl) {
+        router.push(result.data.redirectUrl);
+      } else if (result.data?.sessionId) {
         router.push(`/dashboard/medical-agent/${result.data.sessionId}`);
       }
     } catch (err) {
