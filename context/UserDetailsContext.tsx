@@ -1,6 +1,13 @@
+'use client';
+
+import { createContext, Dispatch, SetStateAction } from 'react';
 import { UserDetails } from '@/app/provider';
-import { createContext } from 'react';
 
-export {createContext} from 'react';
+// ✅ Define a proper type for the context value
+export interface UserDetailsContextType {
+  userDetails: UserDetails | null;
+  setUserDetails: Dispatch<SetStateAction<UserDetails | null>>;
+}
 
-export const UserDetailsContext=createContext<any>(undefined);
+// ✅ Create the context with an initial undefined value
+export const UserDetailsContext = createContext<UserDetailsContextType | undefined>(undefined);

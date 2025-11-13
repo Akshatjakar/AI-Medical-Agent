@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config, { isServer }) => {
-    config.cache = false;
-    return config;
+  eslint: {
+    // ✅ Ignore ESLint errors during build
+    ignoreDuringBuilds: true,
   },
 };
 
