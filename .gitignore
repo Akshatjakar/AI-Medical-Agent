@@ -58,3 +58,6 @@ next-env.d.ts
 # misc
 .DS_Store
 
+
+# clerk configuration (can include secrets)
+/.clerk/
