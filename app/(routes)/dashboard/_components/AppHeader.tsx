@@ -50,7 +50,7 @@ function AppHeader() {
         </nav>
 
         {/* User Profile */}
-        <UserButton afterSignOutUrl="/" />
+        <UserButton />
       </div>
 
       {/* Extra Animations */}
